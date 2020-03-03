@@ -16,6 +16,7 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.1.0 <3.0.0"
   flutter: '>=1.10.2-pre.54'
+  
 
 dependencies:
   flutter:
@@ -28,7 +29,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_country_picker: ^0.1.6
   shell: ^1.0.1
-
+  process_run: ^0.10.7
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

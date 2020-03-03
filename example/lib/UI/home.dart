@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shell/shell.dart';
+import 'package:process_run/shell.dart';
 
 
 class HomePage extends StatelessWidget {
-
+  var shell = Shell();
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,11 @@ class HomePage extends StatelessWidget {
                           'Apalis t30',
                           style: TextStyle(color: Colors.black, fontSize: 20),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                        
+
+                          shell.run('shutdown now');
+                        },
                       ),
                     ),
                     ButtonTheme(
