@@ -37,6 +37,14 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Column(
                   children: <Widget>[
+                    Container(
+                      child: Text('Apalis Family',
+                      style: TextStyle(color: Colors.black, fontSize: 30),
+                      ),
+                    ),
+                      SizedBox(
+                      height: 10,
+                    ),
                     ButtonTheme(
                       minWidth: 200,
                       child: RaisedButton(
@@ -64,7 +72,9 @@ class HomePage extends StatelessWidget {
                         ),
                         onPressed: () {},
                       ),
+                      
                     ),
+              
                     ButtonTheme(
                       minWidth: 200,
                       child: RaisedButton(
@@ -101,6 +111,14 @@ class HomePage extends StatelessWidget {
                 ),
                 Column(
                   children: <Widget>[
+                    Container(
+                      child: Text('Colibri Family',
+                      style: TextStyle(color: Colors.black, fontSize: 30),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     ButtonTheme(
                       minWidth: 200,
                       child: RaisedButton(
