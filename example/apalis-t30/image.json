@@ -1,0 +1,49 @@
+{
+    "config_format": 1,
+    "autoinstall": false,
+    "name": "Toradex Easy Installer",
+    "description": "Toradex Easy Installer for Apalis T30.",
+    "version": "1.8",
+    "release_date": "20181019",
+    "wrapup_script": "wrapup.sh",
+    "icon": "tezi.png",
+    "isinstaller": true,
+    "supported_product_ids": [
+        "0025",
+        "0026",
+        "0031"
+    ],
+    "blockdevs": [
+        {
+            "name": "mmcblk0",
+            "partitions": [
+                {
+                    "partition_size_nominal": 32,
+                    "want_maximised": false,
+                    "content": {
+                        "label": "BOOT",
+                        "filesystem_type": "FAT",
+                        "mkfs_options": "",
+                        "filelist": [
+                            "boot.scr",
+                            "tezi.itb"
+                        ],
+                        "uncompressed_size": 20.55859375
+                    }
+                }
+            ]
+        },
+        {
+            "name": "mmcblk0boot0",
+            "content": {
+                "filesystem_type": "raw",
+                "rawfiles": [
+                    {
+                        "filename": "apalis_t30.img",
+                        "dd_options": "seek=0"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:process_run/shell.dart';
 
+
 class HomePage extends StatelessWidget {
-  var shell = Shell();
+  
+   Future get(moduleName) async {
+
+    var shell = Shell();
+
+    shell = shell.pushd('/home/julio/projects/tezi/$moduleName');
+
+    await shell.run('./recovery-linux.sh');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +82,8 @@ class HomePage extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
-                                    onPressed: () {},
-                                  ),
+                                    onPressed: () {}
+                                ),
                                 ),
                                 ButtonTheme(
                                   minWidth: 180,
@@ -89,10 +98,7 @@ class HomePage extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
-                                    onPressed: () {
-                                      shell.run(
-                                          'cd /home/julio/projects/tezi/apalis-t30');
-                                    },
+                                    onPressed: () => get('apalis-t30'),
                                   ),
                                 ),
                                 ButtonTheme(
@@ -173,6 +179,7 @@ class HomePage extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
+                                    
                                     onPressed: () {},
                                   ),
                                 ),
