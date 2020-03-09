@@ -5,6 +5,13 @@ import 'package:process_run/shell.dart';
 
 class HomePage extends StatelessWidget {
 
+  void passwordAlert(){
+      return AlertDialog(actions: <Widget>[
+
+      ],
+      );
+  }
+
   Future get(moduleName) async {
     var shell = Shell();
 
